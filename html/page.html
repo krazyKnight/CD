@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Webservice</title>
+</head>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+$( function() {
+//-----------------------------	
+$('#btnAddCD').click(function() {
+	$.get( 
+		// 1 URL
+		"load.php",
+		// 2 les Variable 
+		{ name: "John", time: "2pm" } ,
+		// 3 function call back
+		function( data ) {
+  		alert( "Data Loaded: " + data );
+  		$('#demo').html(data);
+	}).fail(function() {
+    alert( "error" );
+  });
+
+});
+//-----------------------------	
+});
+
+</script>
+<body>
+<p id=demo>TEST</p>
+<button id=btn1>OK</button>
+
+</body>
+
+<!--</html><!DOCTYPE html>
+<html>
+<head>
+	<title>Test Webservice</title>
+</head>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+$( function() {
+//-----------------------------	
+$('#btn1').click(function() {
+	$.get( 
+		// 1 URL
+		"online.php",
+		// 2 les Variable 
+		{ name: "John", time: "2pm" } ,
+		// 3 function call back
+		function( data ) {
+  		alert( "Data Loaded: " + data );
+  		$('#demo').html(data);
+	}).fail(function() {
+    alert( "error" );
+  });
+
+});
+//-----------------------------	
+});
+
+</script>
+<body>
+<p id=demo>TEST</p>
+<button id=btn1>OK</button>
+
+</body>
+</html>-->

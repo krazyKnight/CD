@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page CD Client</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css" src="../css/style.css"></style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+	<body>
+		<div class="container">
+      <h1>Bibliothèque</h1>
+
+			<div class="row">
+				<div class="col-md-8">
+				<div class="divCD">
+					Titre du CD :
+					<input type="text" id="CD">
+					<a class="btn btn-success"
+								id="btnAddCD" role="button">
+								<span class="glyphicon glyphicon-plus"></span>
+								Ajouter un CD
+							</a>
+							<span id="spinner">
+								
+							</span>
+				</div>
+				<div id="demo"></div>
+				</div>
+				<div class="col-md-4">
+				<div class="divUser">
+					<table>
+						<tr>
+							<td>Categorie :</td>
+							<td><input type="text" id="nom" /></td>
+						</tr>
+
+						<tr>
+							<td>&nbsp;</td>
+							<td><br>
+							<a class="btn btn-success"
+								id="btnAddUser" role="button">
+								<span class="glyphicon glyphicon-plus"></span>
+								Ajouter une Categorie
+							</a>
+						</td>
+
+						</tr>
+						</table>
+
+				</div>
+				<div id="categorie"></div>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>

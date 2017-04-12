@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script>
+$(document).ready(function(){
+//--------------------------------------
+	$('#category').select2({
+		placeholder:"Select a category",
+		multiple: true
+	});
+	// initialiser la liste
+	var data = [
+	{ id: 12, text: 'Metal' },
+	{ id: 14, text: 'Classique' }
+	];
+
+	$('#category').select2({
+		data: data
+	});
+
+	// predefinir la valeur selectionné
+	var data2 = [12,14]
+	$('#category').val(data2).trigger("change");
+
+	// trigger quand je rajoute une categorie
+		$('#category').on('select2:select', 
+		function (evt) {
+			alert(evt.params.data.id);
+	});	
+
+	$('#category').on('select2:unselect', 
+		function (evt) {
+			alert(evt.params.data.id);
+	});
+});
+</script>
+</head>
+<body>
+	<h1>Select 2</h1>
+	<select name="category" id="category" style="width:200px;"></select>
+</body>
+</html>
